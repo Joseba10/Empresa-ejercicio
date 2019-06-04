@@ -36,7 +36,6 @@ public class Main {
 		System.out.println("Sueldo del tecnico " +tecnico.obtenersueldo());
 		System.out.println("Sueldo del ingeniero " +ingeniero.obtenersueldo());
 		
-		System.out.println(Empleado.numEmpleados);
 		
 		
 		

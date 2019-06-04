@@ -12,9 +12,12 @@ public class Administrativo extends Empleado implements ManejadorOrdenador{
 
 	@Override
 	public void teclear() {
+		
+		System.out.println("Teclear");
 	}
 
 	public void trabajar() {
+		teclear();
 		
 	}
 }

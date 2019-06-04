@@ -3,7 +3,7 @@ package empresa;
 import java.util.Random;
 
 public class Ingeniero extends Empleado implements ManejadorOrdenador,Arreglador{
-
+public static final int PORCENTAJE_MAXIMO_SUBIDA=20;
 	public Ingeniero(String nombre, String apellido, int edad, Dni dni,double sueldo) {
 		super(nombre, apellido, edad, dni, sueldo);
 
@@ -17,11 +17,13 @@ public class Ingeniero extends Empleado implements ManejadorOrdenador,Arreglador
 
 	@Override
 	public void arreglar() {
-		
+		System.out.println("Arreglar");
 	}
 
 	@Override
 	public void teclear() {
+		
+		System.out.println("Teclear");
 	
 		
 	}
@@ -33,17 +35,16 @@ public class Ingeniero extends Empleado implements ManejadorOrdenador,Arreglador
 	
 
 public double obtenersueldo() {
-	  double valorEntero = (int) Math.floor(Math.random()*(0-20+1)+20);
-	  double nuevosueldo= sueldo*valorEntero/100;
 	  
-	  double sueldofinal=sueldo+nuevosueldo;
-	  
-	  sueldo=sueldofinal;
+	Random random = new Random();
+	int porcentajesubida= random.nextInt(PORCENTAJE_MAXIMO_SUBIDA+1);
 	
-	return sueldo;
+	return super.obtenersueldo()*(1+(double)porcentajesubida/(double)100);
 }
 
 static void disenyar() {
+System.out.println("Diseñar");
 }
+
 
 }

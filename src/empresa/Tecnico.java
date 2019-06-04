@@ -15,6 +15,7 @@ public  class Tecnico extends Empleado implements Arreglador {
 
 	@Override
 	public void arreglar() {
+		System.out.println("Arreglar");
 			
 	}
 	
